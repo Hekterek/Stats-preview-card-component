@@ -1,0 +1,302 @@
+:root
+{
+    --color-main-background: hsl(233, 47%, 7%);
+    --color-card-background: hsl(244, 38%, 16%);
+    --color-accent: hsl(277, 64%, 61%);
+
+    --color-heading-stats: hsl(0, 0%, 100%);
+    --color-main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --color-stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body
+{
+    background: var(--color-main-background);
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.img_container
+{
+    
+    background-image: url('images/image-header-desktop.jpg');
+    background-size: cover;
+    border-radius: 0 10px 10px 0;
+    width: 430px;
+    height: 356px;
+    z-index: 1;
+    order: 2;
+}
+
+.img_violet
+{
+    background: rgba(112, 34, 160, 0.6);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.description
+{
+    background: var(--color-card-background);
+    font-family: Inter;
+    order: 1;
+    width: 456px;
+    height: 356px;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+
+.description h1
+{
+    position: absolute;
+    color: white;
+    font-size: 27.5px;
+    width: 300px;
+    left: 55px;
+    top: 56px;
+}
+
+.insight_violet
+{
+    display: inline-block;
+    color: var(--color-accent);
+}
+
+.description h2
+{
+    position: absolute;
+    color: var(--color-stat-headings);
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+    width: 300px;
+    left: 55px;
+    top: 146px;
+}
+
+.stats
+{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    border: solid 1px white;
+    left: 55px;
+    top: 200px;
+    width: 300px;
+    height: 60px;
+}
+
+
+.companies_num, .templates_num, .queries_num
+{
+    position: absolute;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.stats_companies, .stats_templates, .stats_queries
+{
+    position: absolute;
+    color: var(--color-stat-headings);
+    text-transform: uppercase;
+    font-size: 10px;
+    font-family: 'Lexend Deca';
+    letter-spacing: 0.6px;
+}
+
+.companies_num
+{
+    left: 55px;
+    bottom: 70px;
+}
+
+.stats_companies
+{
+    left: 55px;
+    bottom: 53px;
+}
+
+.templates_num
+{
+    left: 171px;
+    bottom: 70px;
+}
+
+.stats_templates
+{
+    left: 171px;
+    bottom: 53px;
+}
+
+.queries_num
+{
+    left: 282px;
+    bottom: 70px;
+}
+
+.stats_queries
+{
+    left: 282px;
+    bottom: 53px;
+}
+
+
+
+@media all and (max-width: 890px)
+{
+    body
+    {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .img_container
+    {
+        order: 1;
+        background-image: url('images/image-header-mobile.jpg');
+        background-size: cover;
+        width: 262px;
+        height: 190px;
+        border-radius: 10px 10px 0 0;
+        z-index: 1;
+    }
+    .img_violet
+    {
+        
+        background: rgba(112, 34, 160, 0.6);
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+
+    .description
+    {
+        order: 2;
+        width: 262px;
+        height: 430px;
+        border-radius: 0 0 10px 10px ;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .description h1
+    {
+        position: absolute;
+        color: white;
+        font-size: 23px;
+        width: 90%;
+        left: initial;
+        top: initial;
+        margin-top: 30px;
+    }
+
+    .description h2
+    {
+        position: absolute;
+        color: var(--color-stat-headings);
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 20px;
+        width: 90%;
+        left: initial;
+        top: initial;
+        margin-top: 125px;
+    }
+
+    .companies_num
+    {
+        top: 225px;
+        left: initial;
+        bottom: initial;
+    }
+
+    .stats_companies
+    {
+        top: 255px;
+        left: initial;
+        bottom: initial;
+    }
+
+    .templates_num
+    {
+        top: 290px;
+        left: initial;
+        bottom: initial;
+    }
+
+    .stats_templates
+    {
+        top: 320px;
+        left: initial;
+        bottom: initial;
+    }
+
+    .queries_num
+    {
+        top: 355px;
+        left: initial;
+        bottom: initial;
+    }
+
+    .stats_queries
+    {
+        top: 385px;
+        left: initial;
+        bottom: initial;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution 
+{ 
+    position: absolute;
+    bottom: 0;
+    font-size: 11px; 
+    text-align: center; 
+    color: white;
+}
+.attribution a 
+{ 
+    color: hsl(228, 45%, 44%); 
+}
